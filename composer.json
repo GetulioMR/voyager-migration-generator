@@ -1,37 +1,42 @@
 {
-  "name": "generate-migrations-hook",
-  "description": "This hook is to generate voyager-only migration for laravel app",
-  "version": "v0.1.3beta",
+  "name": "izarmx/voyager-migration-generator",
+  "description": "This package autogenerates migrations out of database schema changes done through Voyager",
   "license": "MIT",
-  "homepage": "https://github.com/mohammed-io/generate-migrations-hook",
+  "homepage": "https://github.com/izarmx/voyager-migration-generator",
+  "keywords": ["voyager","laravel","migrations","migration"],
   "authors": [
+    {
+      "name": "Daniel Portales R.",
+      "email": "dan@izar.digital",
+      "homepage": "https://techspeak.dev",
+      "role": "Developer"
+    },
     {
       "name": "Mohammed A.",
       "email": "mohammed-io@outlook.com",
       "homepage": "https://mohammed-io.github.io/",
-      "role": "Developer"
+      "role": "Original Developer"
     }
   ],
   "require": {
     "php": "^7.0.0",
-    "larapack/hooks": "~1.0",
     "tcg/voyager": "^1.2",
     "laravel/framework": "^5.5"
   },
   "autoload": {
     "psr-4": {
-      "MohammedIO\\": "src/"
+      "Izar\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "MohammedIO\\Tests\\": "tests/"
+      "Izar\\Tests\\": "tests/"
     }
   },
   "extra": {
-    "hook": {
+    "laravel": {
       "providers": [
-        "MohammedIO\\GenerateMigrationsHookServiceProvider"
+        "Izar\\MigrationGeneratorServiceProvider"
       ]
     }
   },
