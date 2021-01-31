@@ -25,7 +25,7 @@ class TableUpdatedEventHandler
      */
     public function generateContent(string $content)
     {
-        return "DatabaseUpdater::update(\n"
+        return  "DatabaseUpdater::update(\n".
                 "   $content\n".
                 ");";
     }
