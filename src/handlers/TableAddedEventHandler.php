@@ -1,6 +1,6 @@
 <?php
 
-namespace MohammedIO\Handlers;
+namespace Izar\Handlers;
 
 use TCG\Voyager\Events\TableAdded;
 
@@ -27,8 +27,8 @@ class TableAddedEventHandler
      */
     public function generateContent(string $content)
     {
-        return "SchemaManager::createTable(
-            $content
-        );";
+        return  "SchemaManager::createTable(\n".
+                "   $content\n".
+                ");";
     }
 }

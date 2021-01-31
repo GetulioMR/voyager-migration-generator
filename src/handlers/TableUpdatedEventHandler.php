@@ -1,6 +1,6 @@
 <?php
 
-namespace MohammedIO\Handlers;
+namespace Izar\Handlers;
 
 use TCG\Voyager\Events\TableUpdated;
 
@@ -13,11 +13,9 @@ class TableUpdatedEventHandler
     public function handle(TableUpdated $event)
     {
         $data = $event->name;
-
         $this->upContent = $this->generateContent(
             $this->getTokenMaker()->arrayToArrayToken($data, 7)
         );
-
         $this->makeMigrationIfNeeded($data);
     }
 
@@ -27,8 +25,8 @@ class TableUpdatedEventHandler
      */
     public function generateContent(string $content)
     {
-        return "DatabaseUpdater::update(
-            $content
-        );";
+        return "DatabaseUpdater::update(\n"
+                "   $content\n".
+                ");";
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace MohammedIO\Templates;
+namespace Izar\Templates;
 
 class MigrationFileTemplate
 {
@@ -25,7 +25,7 @@ class $className extends Migration
     {
         Type::registerCustomPlatformTypes();
     }
-    
+
     /**
      * Run the migrations.
      *
@@ -47,8 +47,6 @@ class $className extends Migration
     {
         $downContent
     }
-}
-
-        ";
+}";
     }
 }

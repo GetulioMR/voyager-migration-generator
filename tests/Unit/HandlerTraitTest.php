@@ -1,10 +1,10 @@
 <?php
 
-namespace MohammedIO\Tests\Unit;
+namespace Izar\Tests\Unit;
 
-use MohammedIO\Handlers\TableUpdatedEventHandler;
-use MohammedIO\Tests\TestCase;
-use MohammedIO\Utilities;
+use Izar\Handlers\TableUpdatedEventHandler;
+use Izar\Tests\TestCase;
+use Izar\Utilities;
 
 class HandlerTraitTest extends TestCase
 {

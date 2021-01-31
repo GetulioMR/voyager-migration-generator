@@ -1,6 +1,6 @@
 <?php
 
-namespace MohammedIO;
+namespace Izar;
 
 use Carbon\Carbon;
 use Illuminate\Support\Facades\File;
@@ -16,14 +16,10 @@ class Utilities
     {
         $timestamp = str_replace(':',
             '',
-            str_replace(
-                ['-', ' '],
-                '_',
-                Carbon::now()->toDateTimeString()
-            )
+            str_replace(['-', ' '], '_', Carbon::now()->toDateTimeString())
         );
 
-        return $timestamp."_". Str::snake(Str::lower(Str::snake($filename)));
+        return $timestamp . '_' . Str::snake(Str::lower(Str::snake($filename)));
     }
 
     /**
@@ -84,8 +80,8 @@ class Utilities
         mt_srand((double)microtime() * 10000);
         $charid = strtolower(md5(uniqid(rand(), true)));
         $hyphen = chr(45);                  // "-"
-        $lbrace = $trim ? "" : chr(123);    // "{"
-        $rbrace = $trim ? "" : chr(125);    // "}"
+        $lbrace = $trim ? '' : chr(123);    // "{"
+        $rbrace = $trim ? '' : chr(125);    // "}"
         $guidv4 = $lbrace.
             substr($charid,  0,  8).$hyphen.
             substr($charid,  8,  4).$hyphen.

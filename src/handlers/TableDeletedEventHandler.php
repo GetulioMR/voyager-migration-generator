@@ -1,6 +1,6 @@
 <?php
 
-namespace MohammedIO\Handlers;
+namespace Izar\Handlers;
 
 use TCG\Voyager\Events\TableDeleted;
 
@@ -13,9 +13,7 @@ class TableDeletedEventHandler
     public function handle(TableDeleted $event)
     {
         $data = ['name' => $event->name];
-
         $this->upContent = $this->generateContent($event->name);
-
         $this->makeMigrationIfNeeded($data);
     }
 

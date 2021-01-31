@@ -1,6 +1,6 @@
 <?php
 
-namespace MohammedIO\Tests;
+namespace Izar\Tests;
 
 use PHPUnit\Framework\TestCase as TestCaseBase;
 

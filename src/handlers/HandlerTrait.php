@@ -1,18 +1,18 @@
 <?php
 
-namespace MohammedIO\Handlers;
+namespace Izar\Handlers;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
-use MohammedIO\Templates\MigrationFileTemplate;
-use MohammedIO\TokenMaker;
-use MohammedIO\Utilities;
+use Izar\Templates\MigrationFileTemplate;
+use Izar\TokenMaker;
+use Izar\Utilities;
 use TCG\Voyager\Events\TableUpdated;
 
 /**
  * Trait HandlerTrait
- * @package MohammedIO\Handlers
+ * @package Izar\Handlers
  *
  * @property string $prefix
  * @method generateContent(string $content)
@@ -89,6 +89,6 @@ trait HandlerTrait
 
     public function generateTitleFromTableName($tableName)
     {
-        return $this->prefix . " $tableName table with voyager";
+        return $this->prefix . " $tableName from voyager";
     }
 }
