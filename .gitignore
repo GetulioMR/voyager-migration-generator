@@ -1,4 +1,10 @@
 # Created by .ignore support plugin (hsz.mobi)
+composer.lock
+.php_cs.cache
+.phpunit.result.cache
+build/report.junit.xml
+.coveralls.yml
+
 ### Laravel template
 vendor/
 node_modules/
@@ -20,4 +26,3 @@ Homestead.json
 
 # Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
 .rocketeer/
-
