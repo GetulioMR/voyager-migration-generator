@@ -19,7 +19,7 @@
     }
   ],
   "require": {
-    "php": "^7.0.0",
+    "php": "^8.0.0",
     "tcg/voyager": "^1.2",
     "laravel/framework": "^5.5"
   },
